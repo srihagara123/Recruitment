@@ -1,0 +1,150 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#f4f7fc;
+    color:#333;
+    min-height:100vh;
+}
+
+#root{
+    width:100%;
+}
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:40px auto;
+}
+
+.page-title{
+    text-align:center;
+    font-size:2.2rem;
+    font-weight:700;
+    color:#1e3a8a;
+    margin-bottom:30px;
+}
+
+.card{
+    background:#ffffff;
+    border-radius:15px;
+    padding:25px;
+    box-shadow:0 8px 20px rgba(0,0,0,0.08);
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    overflow:hidden;
+    border-radius:12px;
+}
+
+thead{
+    background:#2563eb;
+    color:white;
+}
+
+thead th{
+    padding:16px;
+    text-align:left;
+    font-size:15px;
+    font-weight:600;
+}
+
+tbody td{
+    padding:15px;
+    border-bottom:1px solid #e5e7eb;
+    font-size:14px;
+}
+
+tbody tr:nth-child(even){
+    background:#f9fafb;
+}
+
+tbody tr:hover{
+    background:#dbeafe;
+    transition:.3s;
+}
+
+button{
+    padding:8px 18px;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+    font-size:14px;
+    font-weight:500;
+    transition:0.3s;
+}
+
+.btn-add{
+    background:#22c55e;
+    color:white;
+}
+
+.btn-add:hover{
+    background:#16a34a;
+}
+
+.btn-edit{
+    background:#f59e0b;
+    color:white;
+}
+
+.btn-edit:hover{
+    background:#d97706;
+}
+
+.btn-delete{
+    background:#ef4444;
+    color:white;
+}
+
+.btn-delete:hover{
+    background:#dc2626;
+}
+
+input,
+select{
+    width:100%;
+    padding:12px;
+    border:1px solid #d1d5db;
+    border-radius:8px;
+    font-size:15px;
+    margin-top:6px;
+    margin-bottom:18px;
+    outline:none;
+}
+
+input:focus,
+select:focus{
+    border-color:#2563eb;
+    box-shadow:0 0 6px rgba(37,99,235,.25);
+}
+
+form{
+    display:grid;
+    gap:10px;
+}
+
+@media(max-width:768px){
+
+    .container{
+        width:95%;
+    }
+
+    table{
+        display:block;
+        overflow-x:auto;
+    }
+
+    .page-title{
+        font-size:1.8rem;
+    }
+}

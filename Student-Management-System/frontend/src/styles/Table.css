@@ -1,0 +1,131 @@
+.table-container{
+    background:white;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+thead{
+    background:#2563eb;
+    color:white;
+}
+
+thead th{
+    padding:15px;
+    text-align:left;
+}
+
+tbody td{
+    padding:15px;
+    border-bottom:1px solid #eee;
+}
+
+tbody tr:hover{
+    background:#f1f7ff;
+}
+
+.btn-edit{
+    background:#f59e0b;
+    color:white;
+    border:none;
+    padding:8px 15px;
+    border-radius:6px;
+    margin-right:10px;
+    cursor:pointer;
+}
+
+.btn-delete{
+    background:#ef4444;
+    color:white;
+    border:none;
+    padding:8px 15px;
+    border-radius:6px;
+    cursor:pointer;
+}
+
+.btn-edit:hover{
+    background:#d97706;
+}
+
+.btn-delete:hover{
+    background:#dc2626;
+}
+/* ---------- Pagination ---------- */
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin: 25px 0;
+}
+
+.pagination button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  background-color: #1976d2;
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.pagination button:hover:not(:disabled) {
+  background-color: #1565c0;
+}
+
+.pagination button:disabled {
+  background-color: #bdbdbd;
+  cursor: not-allowed;
+}
+
+.active-page {
+  background-color: #0d47a1 !important;
+}
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 60vh;
+}
+
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 5px solid #e0e0e0;
+  border-top: 5px solid #007bff;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 15px;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.no-data {
+  text-align: center;
+  margin-top: 40px;
+  padding: 30px;
+  background-color: #f8f9fa;
+  border-radius: 10px;
+  color: #555;
+}
+
+.no-data h3 {
+  margin-bottom: 10px;
+}
+
+.no-data p {
+  color: #777;
+}
