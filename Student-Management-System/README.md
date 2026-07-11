@@ -1,113 +1,124 @@
-# Student Management System (PERN Stack)
+# 🎓 Student Management System
+
+A full-stack **Student Management System** built using the **PERN Stack (PostgreSQL, Express.js, React.js, Node.js)**. The application provides an efficient way to manage student records with complete CRUD functionality, dashboard analytics, and a responsive user interface.
+
+---
+
+## 🌐 Live Demo
+
+**Frontend:** https://recruitment-ashy-chi.vercel.app/
+
+**Backend:** https://recruitment-4.onrender.com
+
+---
 
 ## 📌 Project Overview
 
-This project is a **full-stack Student Management System** developed using the **PERN stack**:
-
-* **PostgreSQL** - Database management system for storing student records
-* **Express.js** - Backend framework for creating REST APIs
-* **React.js** - Frontend library for building the user interface
-* **Node.js** - Runtime environment for backend development
-
-The application provides a complete CRUD-based system to manage student information. Users can add, view, update, and delete student records through an interactive web interface connected with a PostgreSQL database.
+This project is a full-stack web application that allows users to manage student records efficiently. It integrates a React frontend with an Express.js backend and PostgreSQL database.
 
 ---
 
-## 🚀 Features
+## ✨ Features
 
-* Add new student records
-* View all registered students
-* Update existing student details
-* Delete student records
-* Search and manage student information
-* REST API integration between frontend and backend
-* PostgreSQL database connectivity
-* Form validation and error handling
-* Responsive user interface
+- 📋 View all students
+- ➕ Add new student records
+- ✏️ Edit student details
+- ❌ Delete student records
+- 📊 Dashboard with statistics
+- 📈 Student analytics using charts
+- 🆕 Recent Students section
+- 📱 Responsive user interface
 
 ---
 
-## 🛠️ Technologies Used
+## 🛠️ Tech Stack
 
 ### Frontend
-
-* React.js
-* HTML5
-* CSS3
-* JavaScript
-* Axios (API communication)
+- React.js
+- Vite
+- HTML5
+- CSS3
+- JavaScript
+- Axios
+- React Router DOM
+- Chart.js
+- React Icons
+- React Toastify
 
 ### Backend
-
-* Node.js
-* Express.js
-* REST APIs
+- Node.js
+- Express.js
+- REST API
 
 ### Database
+- PostgreSQL (Neon)
 
-* PostgreSQL
+### Deployment
+- Frontend: Vercel
+- Backend: Render
+- Database: Neon
 
 ### Tools
-
-* VS Code
-* Git & GitHub
-* Postman
+- VS Code
+- Git & GitHub
+- Postman
 
 ---
 
 ## 📂 Project Structure
 
-```
+```text
 Student-Management-System/
 │
-├── client/
+├── frontend/
 │   ├── src/
-│   │   ├── components/
-│   │   ├── pages/
-│   │   ├── App.js
-│   │   └── index.js
-│   └── package.json
+│   ├── public/
+│   ├── package.json
+│   └── vite.config.js
 │
-├── server/
-│   ├── routes/
+├── backend/
+│   ├── config/
 │   ├── controllers/
-│   ├── db/
+│   ├── routes/
 │   ├── server.js
 │   └── package.json
 │
 ├── database/
 │   └── schema.sql
 │
-├── screenshots/
-│   ├── dashboard.png
-│   ├── add-student.png
-│   ├── student-list.png
-│   └── database.png
+├── docs/
+│   └── screenshots/
 │
 └── README.md
 ```
 
 ---
 
-## ⚙️ Installation and Setup
+## 🚀 Installation & Setup
 
-### 1. Clone the repository
+### 1. Clone the Repository
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/srihagara123/Recruitment.git
 ```
 
-### 2. Install frontend dependencies
+### 2. Navigate to the Project
 
 ```bash
-cd client
+cd Recruitment/Student-Management-System
+```
+
+### 3. Install Frontend Dependencies
+
+```bash
+cd frontend
 npm install
 ```
 
-### 3. Install backend dependencies
+### 4. Install Backend Dependencies
 
 ```bash
-cd ../server
+cd ../backend
 npm install
 ```
 
@@ -115,58 +126,47 @@ npm install
 
 ## 🗄️ Database Setup
 
-1. Install PgAdmin4.
+1. Install PostgreSQL or create a Neon PostgreSQL database.
+2. Create a new database.
+3. Execute the SQL script located in:
 
-2. Create a database:
-
-```sql
-CREATE DATABASE student_management;
+```text
+database/schema.sql
 ```
 
-3. Create the student table:
+This script will:
 
-Example:
-
-```sql
-CREATE TABLE students (
-    id SERIAL PRIMARY KEY,
-    name VARCHAR(100),
-    email VARCHAR(100),
-    phone VARCHAR(15),
-    department VARCHAR(100),
-    roll_number VARCHAR(50)
-);
-```
-
-4. Configure PostgreSQL credentials in the backend `.env` file.
+- Create the `students` table
+- Insert sample student records
 
 ---
 
 ## 🔑 Environment Variables
 
-Create a `.env` file inside the backend folder:
+Create a `.env` file inside the **backend** folder.
 
-```
+```env
 PORT=5000
-DB_USER=your_username
-DB_PASSWORD=your_password
-DB_HOST=localhost
+
+DB_USER=your_database_username
+DB_PASSWORD=your_database_password
+DB_HOST=your_database_host
 DB_PORT=5432
-DB_NAME=student_management
+DB_NAME=your_database_name
 ```
 
 ---
 
 ## ▶️ Running the Application
 
-### Start Backend Server
+### Start Backend
 
 ```bash
-cd server
+cd backend
 npm start
 ```
 
-Backend runs on:
+Backend runs at:
 
 ```
 http://localhost:5000
@@ -177,29 +177,32 @@ http://localhost:5000
 Open another terminal:
 
 ```bash
-cd client
-npm start
+cd frontend
+npm run dev
 ```
 
-Frontend runs on:
+Frontend runs at:
 
 ```
-http://localhost:3000
+http://localhost:5173
 ```
 
 ---
 
 ## 🔄 API Endpoints
 
-| Method | Endpoint            | Description               |
-| ------ | ------------------- | ------------------------- |
-| GET    | `/api/students`     | Fetch all student records |
-| POST   | `/api/students`     | Add a new student         |
-| PUT    | `/api/students/:id` | Update student details    |
-| DELETE | `/api/students/:id` | Delete a student record   |
+| Method | Endpoint | Description |
+|---------|----------|-------------|
+| GET | `/api/students` | Get all students |
+| GET | `/api/students/:id` | Get student by ID |
+| POST | `/api/students` | Add a student |
+| PUT | `/api/students/:id` | Update student |
+| DELETE | `/api/students/:id` | Delete student |
+| GET | `/api/students/recent` | Recent students |
+| GET | `/api/students/stats` | Dashboard statistics |
+| GET | `/api/students/chart-data` | Chart data |
 
 ---
-
 ## 📸 Screenshots
 
 ### Student Dashboard
@@ -220,17 +223,20 @@ http://localhost:3000
 
 ---
 
+---
+
 ## 🎯 Learning Outcomes
 
 Through this project, I learned:
 
-* Developing a full-stack application using the PERN stack
-* Designing and managing a PostgreSQL database
-* Creating REST APIs using Express.js
-* Connecting React frontend with backend services
-* Implementing CRUD operations
-* Managing application state and user interactions
-* Using Git and GitHub for version control
+- Building a complete PERN Stack application
+- Designing and consuming REST APIs
+- Connecting PostgreSQL with Node.js
+- Performing CRUD operations
+- Managing frontend-backend communication
+- Deploying applications using Vercel and Render
+- Hosting PostgreSQL databases using Neon
+- Using Git and GitHub for version control
 
 ---
 
@@ -244,4 +250,5 @@ GitHub: https://github.com/srihagara123
 
 ## 📄 License
 
-This project is created for learning and academic purposes.
+This project is developed for learning and academic purposes.
+
