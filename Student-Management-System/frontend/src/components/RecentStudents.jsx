@@ -13,9 +13,9 @@ function RecentStudents() {
 
     try {
 
-      const response = await axios.get(
-        "http://localhost:5000/api/students/recent"
-      );
+     const response = await axios.get(
+  "https://recruitment-4.onrender.com/api/students/recent"
+);
 
       setStudents(response.data);
 
