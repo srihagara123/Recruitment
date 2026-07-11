@@ -32,7 +32,7 @@ function PlacementChart() {
     try {
 
       const response = await axios.get(
-        "http://localhost:5000/api/students/chart-data"
+        "https://recruitment-4.onrender.com/api/students/chart-data"
       );
 
       const placement = response.data.placementStats;
