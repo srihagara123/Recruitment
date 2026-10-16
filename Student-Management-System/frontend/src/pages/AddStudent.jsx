@@ -32,7 +32,7 @@ function AddStudent() {
   };
 
   const handleSubmit = async (e) => {
-    e.preventDefault();
+    e.preventDefault();``
 
     try {
       await addStudent({
